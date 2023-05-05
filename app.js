@@ -68,5 +68,13 @@ console.log(isAscending([51, 2, 3, 4, 5, 6]));
 
 function bounceFunction() {
   console.log("button clicked");
-  document.querySelector("#green-square").classList.add(bounce)
+  document.querySelector("#green-square").classList.add("bounce");
+  document.querySelector("#green-square").addEventListener("animationend", removeAnimation)
 }
+
+function removeAnimation() {
+      document.querySelector("#green-square").classList.remove("bounce");
+    };
+
+
+
