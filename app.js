@@ -6,7 +6,8 @@ window.addEventListener("load", initApp);
 
 function initApp() {
   console.log("Hello world");
-  findNumberOfEvenDigitsInArray(array);
+  // findNumberOfEvenDigitsInArray(array);
+  document.querySelector("#click-button").addEventListener("click", bounceFunction);
 }
 
 let array = [1, 2, 3, 4, 5, 6];
@@ -50,4 +51,22 @@ function biggestEvenNumberInArray() {
         let elementMax = Math.max(numbers);
         console.log(elementMax);
     }
+}
+
+const isAscending = function (arr) {
+  for (let i = 0; i < arr.length; i += 1)
+    if (arr[i + 1] < arr[i]) {
+      return false;
+    }
+  return true;
+}
+
+console.log(isAscending([1, 2, 3, 4, 5, 6]));
+console.log(isAscending([1, 2, 31, 4, 5, 6]));
+console.log(isAscending([51, 2, 3, 4, 5, 6]));
+
+
+function bounceFunction() {
+  console.log("button clicked");
+  document.querySelector("#green-square").classList.add(bounce)
 }
