@@ -76,5 +76,27 @@ function removeAnimation() {
       document.querySelector("#green-square").classList.remove("bounce");
     };
 
+function addOneHundredAndDivideByThree(num) {
+  num = Number(num);
+  if (num) {
+    let newNumber = (num + 100) / 3
+    return newNumber;
+  } else {
+
+  } return false
+}
+
+let randomNumber = addOneHundredAndDivideByThree(343);
+console.log(randomNumber);
+
+randomNumber = addOneHundredAndDivideByThree("kalob");
+console.log(randomNumber);
+
+randomNumber = addOneHundredAndDivideByThree(30);
+console.log(randomNumber);
+
+randomNumber = addOneHundredAndDivideByThree(500);
+console.log(randomNumber);
+
 
 
